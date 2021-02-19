@@ -1,3 +1,37 @@
+body {
+  background-color: #000614;
+}
+
+body p {
+  color: white;
+  font-size: 1.15em;
+}
+
+#video-placeholder {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+  display: block
+}
+
+#closed-captions {
+  display: flex;
+  justify-content: center;
+}
+
+#audio-captions1 {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  margin-top: 35px;
+}
+
+#audio-captions2 {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
 /* **********************************************
 Basic mechanics
 Hide all paragraphs by default
@@ -6,111 +40,279 @@ Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
 #closed-captions p {
-	opacity: 0;
-	transition: .05s;
-	position: absolute;
-}
-#closed-captions .on {
-	opacity: 1;
-}
-#closed-captions .off {
-	transition: .2s;
-	opacity: 0;
-}
-.voice1 {
-	font-style: italic;
+  opacity: 0;
+  transition: .05s;
+  position: absolute;
 }
 
-/* **********************************************
-The first paragraph, with extended timing for 
-	all siblings. Basically what it does is that
-	it shows the text after a delay, which 
-	corresponds with the time that the word is
-	spoken.
-You probably want to change the styling.
-********************************************** */
-.p0 span {
-	opacity: 0;
-	font-family: brenner;
+#closed-captions .on {
+  opacity: 1;
 }
-.p0.on span:first-of-type {
-	opacity: 1;
-	transition: 0s;
-	font-weight: 200;
+
+#closed-captions .off {
+  transition: .2s;
+  opacity: 0;
 }
-.p0.on span:nth-of-type(2) {
-	opacity: 1;
-	transition: 0s .4s;
-	margin-right: -.25em;
-	font-weight: 400;
+
+.voice1 {
+  font-family: "Brenner Medium";
 }
-.p0.on span:nth-of-type(3) {
-	opacity: 1;
-	transition: 0s .5s;
-	margin-right: -.25em;
-	font-weight: 600;
+
+.voice2 {
+  font-family: "Brenner Mono Regular";
 }
-.p0.on span:nth-of-type(4) {
-	opacity: 1;
-	transition: 0s .7s;
-	margin-right: -.25em;
-	font-weight: 800;
+
+.voice3 {
+  font-family: "Brenner Sans Condensed Regular";
 }
-.p0.on span:nth-of-type(5) {
-	opacity: 1;
-	transition: 0s 1.1s;
-	margin-right: -.25em;
-	font-family: "brenner sans";
+
+.p1.on {
+  font-size: 1.05em;
 }
-.p0.on span:nth-of-type(6) {
-	opacity: 1;
-	transition: 0s 1.4s;
-	margin-right: -.25em;
-	font-family: "brenner display";
+
+.p6.on {
+  box-shadow: 0 0 30px 20px #E13120;
+  font-size: 1em;
 }
-.p0.on span:nth-of-type(7) {
-	opacity: 1;
-	transition: 0s 1.7s;
-	margin-right: -.25em;
-	font-family: "brenner script";
+
+.p6.off {
+  transition: 4s;
+  opacity: 0;
 }
-.p0.on span:nth-of-type(8) {
-	opacity: 1;
-	transition: 0s 2s;
-	font-family: "brenner script";
+
+.p9.off {
+  box-shadow: 0 0 40px 20px #000000;
 }
-.p0.on span:nth-of-type(9) {
-	opacity: 1;
-	transition: 0s 3s;
-	font-family: "brenner Sans condensed";
+
+.p12.off {
+  box-shadow: 0 0 40px 20px #000000;
 }
-.p0.on span:nth-of-type(10) {
-	opacity: 1;
-	transition: 0s 3.2s;
-	font-family: "brenner mono";
+
+.p15.off {
+  box-shadow: 0 0 40px 20px #000000;
 }
-.p0.on span:nth-of-type(11) {
-	opacity: 1;
-	transition: 0s 3.7s;
-	font-family: "brenner slab";
+
+.p18.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p20.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p23.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p26.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p29.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p31.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p34.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p37.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p39.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p41.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p42.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p43.off {
+  box-shadow: 0 0 40px 20px #000000;
+}
+
+.p45.on {
+  box-shadow: 0 0 15px 10px #1EB738;
+  transition-duration: 1s;
 }
 
 /* **********************************************
 Sounds.
-	You can style the whole body, or you can 
+	You can style the whole body, or you can
 	style anything within the body the moment
 	a sound starts.
 *********************************************  */
-
-/* The moment the class .sound1 is added to the body, the background is yellow */
-.sound1 {
-	background: yellow;
+.sound1 #video-placeholder {
+  box-shadow: 0 0 15px 10px #E13120;
+  transition-duration: 0.5s;
 }
 
-iframe {
-	transition: 1s;
+.sound1 #audio-captions1 {
+  opacity: 1;
+  transition-duration: 0.5s;
 }
-/* The moment the class .sound1 is added to the body, the movie makes a turn */
-.sound1 iframe {
-	transform: rotate(1turn);
+
+.sound2 #video-placeholder {
+  box-shadow: 0 0 0 0;
+  transition-duration: 0.5s;
+}
+
+.sound2 #audio-captions1 {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+.sound3 #video-placeholder {
+  box-shadow: 0 0 25px 5px #E13120;
+  transition-duration: 0.6s;
+}
+
+.sound3 #audio-captions1 {
+  opacity: 1;
+  transition-duration: 0.6s;
+}
+
+.sound4 #video-placeholder {
+  box-shadow: 0 0 0 0;
+  transition-duration: 0.5s;
+}
+
+.sound4 #audio-captions1 {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+.sound5 #video-placeholder {
+  box-shadow: 0 0 20px 15px #E13120;
+  transition-duration: 1.2s;
+  transition-timing-function: cubic-bezier(.14, .44, 1, .65);
+}
+
+.sound5 #audio-captions1 {
+  opacity: 1;
+  transition-duration: 0.8s;
+}
+
+.sound6 #video-placeholder {
+  box-shadow: 0 0 0 0;
+  transition: 1s 0.5s;
+}
+
+.sound6 #audio-captions1 {
+  opacity: 0;
+  transition: 1s 0.5s;
+}
+
+/* Verandering achtergrond */
+.sound7 {
+  background-color: #A19E94;
+  transition: 1s;
+}
+
+.sound7 p {
+  color: black;
+}
+
+.sound8 #video-placeholder {
+  box-shadow: 0 0 17px 13px #E13120;
+  transition-duration: 1.2s;
+  transition-timing-function: cubic-bezier(.14, .44, 1, .65);
+}
+
+.sound8 #audio-captions1 {
+  opacity: 1;
+  transition-duration: 0.8s;
+}
+
+.sound9 #video-placeholder {
+  box-shadow: 0 0 0 0;
+  transition-duration: 1s;
+}
+
+.sound9 #audio-captions1 {
+  opacity: 0;
+  transition-duration: 0.1s;
+}
+
+.sound10 #video-placeholder {
+  box-shadow: 0 0 25px 20px #E13120;
+  transition: 0.5s 0.8s;
+}
+
+.sound10 #audio-captions1 {
+  opacity: 1;
+  transition: 0.5s 0.8s;
+}
+
+.sound11 #video-placeholder {
+  box-shadow: 0 0 0 0;
+  transition: 1.5s 1.1s;
+}
+
+.sound11 #audio-captions1 {
+  opacity: 0;
+  transition: 1.5s 1.1s;
+}
+
+/* Verandering achtergrond */
+.sound12 {
+  background-color: #DEDECA;
+  transition: 1s 1s;
+}
+
+.sound12 p {
+  color: black;
+}
+
+.sound12 .voice1 {
+  font-size: 1.30em;
+}
+
+.sound12 .voice2 {
+  font-size: 1.05em;
+}
+
+/* "Animatie" video kleiner maken */
+.sound12 #video-placeholder {
+  width: 450px;
+  height: 250px;
+  transition-duration: 42s;
+  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+}
+
+/* Maakt achtergrond donkerder */
+.sound13 {
+  background-color: #626662;
+  transition-duration: 41s;
+  transition-timing-function: cubic-bezier(.82, .19, .86, .56);
+}
+
+.sound13 #audio-captions2 {
+  opacity: 1;
+  transition-duration: 0.1s;
+}
+
+.sound28 #video-placeholder {
+  width: 600px;
+  height: 400px;
+  transition-duration: 0.5s;
+}
+
+.sound28 #audio-captions2 {
+  opacity: 0;
+  transition-duration: 0.1s;
+}
+
+.sound28 {
+  background-color: #DEDECA;
+  transition-duration: 0.5s;
 }
